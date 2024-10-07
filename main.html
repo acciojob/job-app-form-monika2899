@@ -7,10 +7,58 @@
 </head>
 
 <body>
+	<form action="/submit" method="post">
+		<label for="name">Name*</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+		<label for="email">Email*</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+		<label>Gender*</label><br>
+<label for="male">
+    <input type="radio" id="male" name="gender" value="Male" required>
+    Male
+</label><br>
+<label for="female">
+    <input type="radio" id="female" name="gender" value="Female" required>
+    Female
+</label><br>
+<label for="laptop">Laptop Brands</label>
+  <select id="laptop" name="laptopBrand">
+    <option value="" disabled selected>Select a brand</option>
+    <option value="apple">Apple</option>
+    <option value="asus">Asus</option>
+    <option value="hp">HP</option>
+  </select>
+    <br>
+		<label for="age">Age*</label>
+		<input type="number" id="age" name="age" step="1" required>
+		<br>
+		<label for="dob">Date of Birth*</label>
+        <input type="date" id="dob" name="dob" required>
+		<br>
+		<label for="password">Password*</label>
+		<input type="password" id="password" name="password" required>
+		<br>
+		<label for="portfolio">Portfolio URL</label>
+		<input type="url" id="portfolio" name="portfolioUrl">
+		<br>
+		<button type="submit">Submit</button>
+
+		
+		<!--When you set step="1", it means that the input field will accept values in increments of 1. This ensures that only whole numbers are allowed. Here's how it affects the input:
+Valid Entries: Only whole numbers (e.g., 1, 2, 3, 4, etc.) are valid entries.-->
+	</form>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
-
-</body>
+<!-- for attribute in label and id in input should be same-->
+	<!-- The name attribute: This is used within <input> elements to provide a name for the input element. This is important because the data entered into the form is sent to the server using these names.
+  -->
+	<!-- \Remember, the id attribute is used for identifying the element in CSS and JavaScript, while the name attribute is used to reference the form data after the form is submitted. The value attribute is used to define the initial value of the input field or to set what data is sent when a form is submitted.
+	 -->
+	<!-- The value attribute: This is used within <input> elements to provide an initial value for the input field or to set a value for radio buttons, checkboxes, and options in a dropdown list.
+	 -->
+	</body>
 
 </html>
